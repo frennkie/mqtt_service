@@ -17,7 +17,7 @@ StandardError=journal
 # service shows up immediately in systemd's logs
 Environment=PYTHONUNBUFFERED=1
 
-EnvironmentFile=/etc/pivpn_reporter.env
+EnvironmentFile=/etc/my_service.env
 
 # Automatically restart the service if it crashes
 Restart=on-failure
