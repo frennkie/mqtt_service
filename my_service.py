@@ -5,7 +5,6 @@ import signal
 import sys
 import threading
 import time
-from logging.config import dictConfig
 from typing import Optional
 
 import paho.mqtt.client as mqtt
@@ -14,30 +13,7 @@ from typing_extensions import Annotated
 
 __version__ = "0.1.0"
 
-# logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)-6s %(message)s')
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "formatters": {
-        "default": {
-            "format": "%(asctime)s %(levelname)-6s %(message)s"
-        },
-        "simple": {
-            "format": "%(levelname)-6s %(message)s",
-        }
-    },
-    "handlers": {
-        "stdout": {
-            "class": "logging.StreamHandler",
-            "stream": "ext://sys.stdout",
-            "formatter": "simple",
-        }
-    },
-    "loggers": {"": {"handlers": ["stdout"], "level": "DEBUG"}},
-}
-
-dictConfig(LOGGING)
+logging.basicConfig(level=logging.INFO, format='%(levelname)-6s %(message)s')
 
 
 def version_callback(value: bool):
