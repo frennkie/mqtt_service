@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "my_service"
+version = "0.1.0"
+description = "My Service"
+authors = ["Author <author@example.com"]
+maintainers = ["Author <author@example.com"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/example/my_service"
+repository = "https://github.com/example/my_service"
+classifiers = [
+    "Development Status :: 4 - Beta",
+]
+
+[tool.poetry.dependencies]
+
+dependencies = [
+    "paho-mqtt",
+    "typer"
+]
