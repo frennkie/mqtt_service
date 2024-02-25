@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)-6s %(message)s')
 
 def version_callback(value: bool):
     if value:
-        print(f"My Service Start Version: {__version__}")
+        print(f"My Service Version: {__version__}")
         raise typer.Exit()
 
 
